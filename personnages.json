@@ -1,0 +1,66 @@
+[
+    {
+        "id": "ac6aba13-2e2e-4c17-9e1f-04526a09ef89",
+        "pseudo": "Jean Neymar",
+        "inventaire": [
+            {
+                "cape": "cape par defaut"
+            },
+            {
+                "coiffe": "coiffe par defaut"
+            },
+            {
+                "anneau": "anneau par defaut"
+            }
+        ],
+        "niveau": 1
+    },
+    {
+        "id": "eb4428f4-71c3-441f-864f-a819798d1648",
+        "pseudo": "Jean NeyPaMar",
+        "inventaire": [
+            {
+                "cape": "cape de fou furieux"
+            },
+            {
+                "coiffe": "coiffe de fou furieux"
+            },
+            {
+                "anneau": "anneau de fou furieux"
+            }
+        ],
+        "niveau": 1
+    },
+    {
+        "id": "1b4e42ec-9a7c-4aaa-b131-2ddf7aa5df79",
+        "pseudo": "Jean Neymar",
+        "inventaire": [
+            {
+                "cape": "cape par defaut"
+            },
+            {
+                "coiffe": "coiffe par defaut"
+            },
+            {
+                "anneau": "anneau par defaut"
+            }
+        ],
+        "niveau": 1
+    },
+    {
+        "id": "b8dd262e-05a3-4afc-8e52-96587b00533a",
+        "pseudo": "Jean NeyPaMar",
+        "inventaire": [
+            {
+                "cape": "cape de fou furieux"
+            },
+            {
+                "coiffe": "coiffe de fou furieux"
+            },
+            {
+                "anneau": "anneau de fou furieux"
+            }
+        ],
+        "niveau": 1
+    }
+]
