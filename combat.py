@@ -31,5 +31,7 @@ class Combat:
                 continue
 
             print(self.p1.attaquer(self.p2))
+            if self.p2.vie <= 0:
+                break
             print(self.p2.attaquer(self.p1))
             

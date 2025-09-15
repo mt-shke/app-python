@@ -7,22 +7,20 @@ FICHIER_JSON = "personnages.json"
 
 # class Personnage permet de créer des personnages et d'intéragir entre eux
 class Personnage:
-    id: int
-    niveau = 1
-    vie = 100
-    defense = 25
-    attaque = 25        
-    endurance = 100
-    endurance_par_coup = 25
-    pseudo : str
-    sous_boost : bool = False
-    inventaire : dict = {}
 
 # Initialise l'instance avec des nouveaux attributs
     def __init__(self, pseudo : str, items = None):
         self.pseudo = pseudo
-        self.niveau = self.niveau
+        self.niveau = 1
         self.id = self.generer_id()
+        self.vie = 100
+        self.defense = 25
+        self.attaque = 25        
+        self.endurance = 100
+        self.endurance_par_coup = 25
+        self.pseudo : str
+        self.sous_boost : bool = False
+        self.inventaire : dict = {}
         if items != None:
             self.inventaire["cape"] = items["cape"]
             self.inventaire["coiffe"] = items["coiffe"]
@@ -42,10 +40,11 @@ class Personnage:
         if cible.vie <= 0:
             return "perso deja K.O"
         cible.vie = cible.vie - self.attaque
+        attaque_booste = self.attaque
         if self.sous_boost:
             self.sous_boost = False
             self.attaque = 25
-        return f"{self.pseudo} enlever {self.attaque} a {cible.pseudo}, il reste {cible.vie} HP a {cible.pseudo}"
+        return f"{self.pseudo} enleve {round(attaque_booste, 2)} a {cible.pseudo}, il reste {round(cible.vie, 2)} HP a {cible.pseudo}"
 
 # Genere un id unique
     def generer_id(self):
@@ -74,7 +73,7 @@ class Personnage:
         # self.attaque *= 1.20 # permet en 1 fois de faire le calcul des 20%
         self.attaque = attaque_sous_crie
         self.sous_boost = True
-        return f"{self.pseudo} viens de crier, il attaque maintenant a : {self.attaque}"
+        return f"{self.pseudo} vient de crier, il attaque maintenant a : {self.attaque}"
 
 # Charge les equipements du personnage et reevalue ses caracteristiques
     def load_stuff(self):

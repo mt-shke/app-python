@@ -1,6 +1,5 @@
 import os
 from item import Item
-from personnage import Personnage
 from combat import Combat
 import random
 
@@ -63,7 +62,9 @@ def menu_gestion_equipements(personnage):
             item = Item("anneau", input("Saisir le nom de l'équipement "), "classic", (random.randint(0, 20), random.randint(0, 30), random.randint(0, 10), random.randint(0, 10)))
             personnage.equipper(categorie, item)
         elif choix == '2.b':
-            print("Modifier un équipement (fonction à implémenter)")
+            categorie = input("Saisir une categorie ")
+            item = Item("anneau", input("Saisir le nom de l'équipement "), input("Saisier la rarete "), int(input("Saisir l'attaque de l'objet ")), int(input("Saisir la vitalite de l'objet ")), int(input("Saisir la defense de l'objet ")), int(input("Saisir l'endurance de l'objet ")))
+            personnage.equipper(categorie, item)
         elif choix == '2.c':
             item = input("Saissir l'équipement à supprimer ")
             personnage.supprimer_equipement(item)
@@ -120,8 +121,8 @@ def menu_principal(personnage):
 
 def choix_personnage(p1, p2):
     while True:
-        print("1 : Choisir p1")
-        print("2 : Choisir p2")
+        print("1 : Choisir personnage 1")
+        print("2 : Choisir personnage 2")
         print("3 : Demarrer le combat")
         print("0 : Quitter")
         choix = input("\nChoix : ").strip()
