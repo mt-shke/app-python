@@ -1,9 +1,6 @@
 from personnage import Personnage
 import random
 
-
-
-
 class Combat:
     def __init__ (self, personnage1:Personnage, personnage2: Personnage):
         self.p1 = personnage1

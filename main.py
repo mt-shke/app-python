@@ -1,4 +1,5 @@
 from personnage import Personnage
+from tank import Tank
 from item import Item
 from menu import choix_personnage
 
@@ -18,7 +19,8 @@ stuff = {"cape" : cape_de_fou, "coiffe" : coiffe_de_fou, "anneau" : anneau_de_fo
 
 # Personnages
 p1 = Personnage("Jean Neymar")
-p2 = Personnage("Jean NeyPaMar", stuff)
+# p2 = Personnage("Jean NeyPaMar", stuff)
+p3 = Tank("Hubert")
 
 
 
@@ -42,5 +44,5 @@ print(f"""
 """)
 
 
-choix_personnage(p1, p2)
+choix_personnage(p1, p3)
 
