@@ -1,6 +1,8 @@
 from personnage import Personnage
 from tank import Tank
 from item import Item
+from cape import Cape
+from coiffe import Coiffe
 from menu import choix_personnage
 
 # Suite :
@@ -22,8 +24,6 @@ p1 = Personnage("Jean Neymar")
 # p2 = Personnage("Jean NeyPaMar", stuff)
 p3 = Tank("Hubert")
 
-
-
 # CLI
 
 print(f"""
@@ -42,7 +42,6 @@ print(f"""
         3.a : Regles du jeu
 0 : Quitter le jeu
 """)
-
 
 choix_personnage(p1, p3)
 
