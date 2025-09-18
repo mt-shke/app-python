@@ -1,9 +1,12 @@
 from personnage import Personnage
 from tank import Tank
+from dps import Dps
+from healer import Healer
 from item import Item
 from cape import Cape
 from coiffe import Coiffe
 from menu import choix_personnage
+from jsonManager import JsonManager
 
 # Suite :
 # -> Docstring pour chaque classe (sur la classe et ses méthodes)
@@ -20,10 +23,15 @@ stuff = {"cape" : cape_de_fou, "coiffe" : coiffe_de_fou, "anneau" : anneau_de_fo
 
 
 # Personnages
-p1 = Personnage("Jean Neymar")
+# p1 = Personnage("Jean Neymar")
 # p2 = Personnage("Jean NeyPaMar", stuff)
-p3 = Tank("Hubert")
+# p3 = Tank("Hubert")
+p4 = Dps("Herve")
+p5 = Healer("Hugues")
 
+
+# personnages = JsonManager("personnages.json").load() 
+# print(personnages[0])
 # CLI
 
 print(f"""
@@ -43,5 +51,5 @@ print(f"""
 0 : Quitter le jeu
 """)
 
-choix_personnage(p1, p3)
+choix_personnage(p4, p5)
 

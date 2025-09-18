@@ -1,0 +1,41 @@
+{
+   "1": {
+      "nom": "Cape de fou",
+      "rarete": "epique",
+      "_type": "cape",
+      "durabilite": 0,
+      "poids": 0,
+      "caracteristique": {
+         "vie": 10,
+         "attaque": 10,
+         "endurance": 10,
+         "defense": 10
+      }
+   },
+   "2": {
+      "nom": "Cape de malade",
+      "rarete": "epique",
+      "_type": "cape",
+      "durabilite": 0,
+      "poids": 0,
+      "caracteristique": {
+         "vie": 15,
+         "attaque": 15,
+         "endurance": 15,
+         "defense": 15
+      }
+   },
+   "3": {
+      "nom": "Cape de fifou",
+      "rarete": "epique",
+      "_type": "cape",
+      "durabilite": 0,
+      "poids": 0,
+      "caracteristique": {
+         "vie": 20,
+         "attaque": 20,
+         "endurance": 20,
+         "defense": 20
+      }
+   }
+}
