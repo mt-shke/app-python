@@ -12,7 +12,6 @@ class Personnage:
     def __init__(self, pseudo : str, items = None):
         self.pseudo = pseudo
         self.niveau = 1
-        self.id = self.generer_id()
         self.vie = 100
         self.defense = 25
         self.attaque = 25        
@@ -46,9 +45,6 @@ class Personnage:
             self.attaque = 25
         return f"{self.pseudo} enleve {round(attaque_booste, 2)} a {cible.pseudo}, il reste {round(cible.vie, 2)} HP a {cible.pseudo}"
 
-# Genere un id unique
-    def generer_id(self):
-        return str(uuid.uuid4())
  
 # Presente le personnage et ses caracteristiques
     def presentation(self):
@@ -91,7 +87,6 @@ class Personnage:
             items.append({n :i.nom})
         
         return {
-            "id": self.id,
             "pseudo": self.pseudo,
             "inventaire": items,
             "niveau": self.niveau,
@@ -100,7 +95,6 @@ class Personnage:
 # Recupere l'objet personnage    
     def from_dict(cls, data):
         return cls(
-            id=data.get("id"),
             nom=data.get("nom"),
             niveau=data.get("niveau")
         )
